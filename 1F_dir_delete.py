@@ -46,8 +46,4 @@ while len(a) > 1:
 
 print("Removed {} directories.".format(x))
 
-#for a in li:
-
-
-
-#driver.close()
+driver.close()
