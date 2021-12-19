@@ -1,5 +1,6 @@
 # 1F_dir_delete
 Deletes every directory on 1F w/ Selenium
+Added <code>time.sleep(.2)</code> to fix IndexError.
 
 <ol>
 <li>Install Python 3</li>
