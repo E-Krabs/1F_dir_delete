@@ -1,5 +1,5 @@
 # 1F_dir_delete
-Deletes every directory on 1F w/ Selenium
+Deletes every directory on 1F w/ Selenium<br>
 Added <code>time.sleep(.2)</code> to fix IndexError.
 
 <ol>
