@@ -15,5 +15,5 @@ Edit <code>your_password</code> = "" with your password.</li>
 <li>profit</li>
 </ol>
 
-https://www.reddit.com/r/Piracy/comments/rjofaa/delete_multiple_folders_in_1fichier/
+https://www.reddit.com/r/Piracy/comments/rjofaa/delete_multiple_folders_in_1fichier/<br>
 https://1fichier.com
