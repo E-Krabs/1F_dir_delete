@@ -14,3 +14,5 @@ Edit <code>your_password</code> = "" with your password.</li>
 <li><code>Python 1F_dir_delete.py</code></li>
 <li>profit</li>
 </ol>
+
+https://www.reddit.com/r/Piracy/comments/rjofaa/delete_multiple_folders_in_1fichier/
