@@ -1,10 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import time
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) #ignore deprecations
 
-your_email = ""
+your_email = ".com"
 your_password = ""
 
 driver = webdriver.Firefox()
@@ -24,26 +27,20 @@ login.click()
 time.sleep(3) #wait for slower computers
 
 a = driver.find_elements_by_class_name("ui-draggable")
-#print(a)
+wait = WebDriverWait(driver, 10)
 
 x = 0
-wait = .3 #increase this number if IndexError persists
-if len(a) > 20: #if theres more than 20 file, it may impact the loading speed
-	wait = .6 #so wait longer
-
 while len(a) > 1:
-	time.sleep(wait) #wait for files to load
-	#print(len(a))
-	a = driver.find_elements_by_class_name("ui-draggable")
-	print(len(a))
-	a[0].click()
-	time.sleep(.7)
-	print(driver.current_url)
-	delete = driver.find_element_by_id("rmdir")
-	delete.click()
+	#cd = driver.find_element_by_class_name("ui-draggable") 
+	#cd.click()
+	try:
+		wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "ui-draggable"))).click()
+	except:
+		break
+	wait.until(EC.element_to_be_clickable((By.ID, "rmdir"))).click()
 	driver.refresh()
 	x += 1
-
-print("Removed {} directories.".format(x))
+	print("Removed #{}".format(x))
+print("Deleted {} directories.".format(x))
 
 driver.close()
