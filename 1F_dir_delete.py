@@ -27,9 +27,9 @@ a = driver.find_elements_by_class_name("ui-draggable")
 #print(a)
 
 x = 0
-wait = .2
+wait = .3 #increase this number if IndexError persists
 if len(a) > 20: #if theres more than 20 file, it may impact the loading speed
-	wait = .4 #so wait longer
+	wait = .6 #so wait longer
 
 while len(a) > 1:
 	time.sleep(wait) #wait for files to load
