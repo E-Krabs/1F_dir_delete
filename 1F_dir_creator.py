@@ -4,8 +4,8 @@ import time
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) #ignore deprecations
 
-your_email = "Tyler.Smith11407@gmail.com"
-your_password = "UJ3B8VuYDMfhkG7"
+your_email = ""
+your_password = ""
 
 driver = webdriver.Firefox()
 
